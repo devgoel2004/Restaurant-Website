@@ -1,0 +1,48 @@
+* {
+  margin: 0%;
+}
+body {
+  background-color: #1d1d6c;
+  color: white;
+}
+.join {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Roboto Serif", serif;
+}
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: antiquewhite;
+  width: 95%;
+  color: #1d1d6c;
+  --mask: radial-gradient(10.2px at 12px 50%, #000 99%, #0000 101%) 0
+      calc(50% - 20px) / 51% 40px repeat-y,
+    radial-gradient(10.2px at -2px 50%, #0000 99%, #000 101%) 10px 50% /
+      calc(51% - 10px) 40px repeat-y,
+    radial-gradient(10.2px at calc(100% - 12px) 50%, #000 99%, #0000 101%) 100%
+      calc(50% - 20px) / 51% 40px repeat-y,
+    radial-gradient(10.2px at calc(100% + 2px) 50%, #0000 99%, #000 101%)
+      calc(100% - 10px) 50% / calc(51% - 10px) 40px repeat-y;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  height: 100vh;
+}
+.address {
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+}
+#button {
+  padding: 20px;
+  margin-left: 20px;
+}
+@media screen and (max-width: 600px) {
+  .join {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+}

@@ -1,0 +1,201 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+.body {
+  background-color: #1d1d6c;
+  font-family: "Poppins";
+}
+div.content {
+  background-color: rgb(249, 242, 240);
+  width: 90%;
+  margin: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 0.5%;
+  height: auto;
+  --mask: radial-gradient(12px at 12px 50%, #0000 97%, #000) -12px/ 100% 22.2px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  padding-bottom: 20px;
+  color: #1d1d6c;
+}
+#image-logo {
+  display: none;
+  width: 150px;
+}
+nav {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.itemss {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  font-size: 1.1rem;
+}
+.itemss::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1d1d6c;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+.navigation-button {
+  margin-top: 15px;
+  margin-right: 25px;
+}
+
+.itemss:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+#address-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu";
+  color: #1d1d6c;
+  font-weight: 100;
+  font-size: 0.5rem;
+  text-align: center;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: small;
+}
+#image-src {
+  width: 95%;
+}
+.image-src-image {
+  display: flex;
+  justify-content: center;
+}
+#image-src-image {
+  position: relative;
+}
+#image-src-image h1 {
+  text-align: center;
+  position: absolute;
+  color: white;
+  font-weight: bolder;
+  top: 40%;
+}
+.story {
+  color: #1d1d6c;
+  width: 80%;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+#story {
+  display: flex;
+  justify-content: center;
+}
+#story-about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#image-src-about {
+  width: 100%;
+  height: 100%;
+}
+.menu {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  color: #1d1d6c;
+}
+.menu img {
+  width: 150px;
+  height: 170px;
+}
+#story-about-content {
+  border-radius: 50px;
+  padding: 20px;
+  padding-bottom: 30px;
+  color: #1d1d6c;
+  border: 2px solid #1d1d6c;
+}
+.menu h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.comforts {
+  text-align: center;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-weight: bolder;
+  font-size: 2.2rem;
+}
+#story-about-image-image {
+  display: flex;
+  justify-content: center;
+}
+.story-about-experience h5 {
+  font-size: 2.1rem;
+  font-weight: bolder;
+}
+#original-crew {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.2rem;
+  padding: 50px;
+}
+#chef-image {
+  width: 400px;
+  height: 350px;
+  padding: 20px;
+}
+#chef-image:hover {
+  border-radius: 50px;
+  background-color: rgb(236, 227, 181);
+}
+.crew-image {
+  display: flex;
+  justify-content: center;
+}
+#crew-image-content {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 800px) {
+  #image-src {
+    width: 95%;
+  }
+  .story {
+    font-size: 0.7rem;
+  }
+  #story-about-content {
+    margin-top: 20px;
+  }
+  #image-src-about {
+    height: 450px;
+    width: 92%;
+  }
+  .story-about-experience {
+    font-size: 0.9rem;
+  }
+  #image-logo {
+    display: block;
+    margin-left: 5px;
+    width: 200px;
+  }
+  #chef-image {
+    width: 300px;
+    height: 300px;
+  }
+  #story-about-image {
+    display: flex;
+    justify-content: center;
+  }
+}

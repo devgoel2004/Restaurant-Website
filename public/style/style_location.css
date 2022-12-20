@@ -1,0 +1,196 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+.body {
+  background-color: #1d1d6c;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+div.content {
+  background-color: rgb(249, 242, 240);
+  width: 90%;
+  margin: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 0.5%;
+  height: auto;
+  --mask: radial-gradient(12px at 12px 50%, #0000 97%, #000) -12px/ 100% 22.2px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+#address-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu";
+  color: #1d1d6c;
+  font-weight: 100;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+}
+img {
+  width: 95%;
+  z-index: -1;
+}
+img {
+  width: 95%;
+}
+div.hours-and-locations {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #1d1d6c;
+  font-family: "Poppins";
+  font-weight: bolder;
+}
+div.hours-and-locations:hover {
+  text-decoration: underline;
+}
+div.iconss {
+  color: gold;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+}
+.iconss i {
+  font-size: 30px;
+  width: 50px;
+}
+.address-content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #1d1d6c;
+  text-decoration: underline;
+}
+.timing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+.timing .timing-weeks p {
+  color: #1d1d6c;
+  font-size: large;
+  font-weight: bold;
+  margin: 0%;
+}
+.timing-weeks span {
+  color: #1d1d6c;
+  font-size: small;
+}
+#variations {
+  text-align: center;
+}
+.variations-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1d1d6c;
+  font-family: "Ubuntu";
+  font-size: 0.9rem;
+}
+.gmap_canvas {
+  width: 95%;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+}
+img {
+  height: 50%;
+}
+.icons {
+  display: flex;
+  margin-left: 10px;
+  padding: 10px;
+}
+.icons i {
+  color: #1d1d6c;
+  padding: 2px;
+  font-size: large;
+}
+.row-image {
+  position: relative;
+  z-index: -1;
+  height: 55%;
+}
+li {
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 700px) {
+  .image-content {
+    height: 500px;
+  }
+  img {
+    height: 80%;
+  }
+}
+
+nav {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.itemss {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  font-size: 1.1rem;
+}
+.itemss::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1d1d6c;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+.navigation-button {
+  margin-top: 15px;
+  margin-right: 25px;
+}
+
+.itemss:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+#address-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu";
+  color: #1d1d6c;
+  font-weight: 100;
+  font-size: 0.5rem;
+  text-align: center;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: small;
+}
+#image-logo {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  #image-logo {
+    display: block;
+    width: 180px;
+  }
+}
