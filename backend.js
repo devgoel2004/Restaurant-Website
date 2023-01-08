@@ -1,6 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+mongoose.connect(
+  "mongodb+srv://devgoel2004:9690011021@reservations.ixlqhf5.mongodb.net/ReservationDB"
+);
+const database = mongoose.connection;
 const app = express();
+app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/reservations.html", (req, res) => {
@@ -15,11 +21,17 @@ app.get("/menu.html", (req, res) => {
 app.get("/contact.html", (req, res) => {
   res.sendFile(__dirname + "/contact.html");
 });
-app.get("/hours&Location.html", (req, res) => {
+app.get("/hours&location.html", (req, res) => {
   res.sendFile(__dirname + "/hours_location.html");
 });
 app.get("/story.html", (req, res) => {
   res.sendFile(__dirname + "/story.html");
+});
+app.get("/success_reservation.html", (req, res) => {
+  res.sendFile(__dirname + "/success_reservation.html");
+});
+app.get("/success.html", (req, res) => {
+  res.sendFile(__dirname + "/contact_success.html");
 });
 //Post method used to fetch data from the entered data and in reservation data.
 app.post("/reservation", (req, res) => {
@@ -28,11 +40,22 @@ app.post("/reservation", (req, res) => {
   const date = req.body.date;
   const email = req.body.email;
   const time = req.body.time;
-  console.log("Customer Name is:" + customerName);
-  console.log("Contact Number is:" + contactNumber);
-  console.log("Reservation Time is: " + date);
-  console.log("Email is: " + email);
-  console.log("Timing is: " + time);
+  const data = {
+    customerName: customerName,
+    contactNumber: contactNumber,
+    date: date,
+    email: email,
+    time: time,
+  };
+  console.log("Input has been submitted.");
+  database.collection("users").insertOne(data, (err, collection) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("record Inserted Success");
+    }
+  });
+  return res.redirect("/success_reservation.html");
 });
 app.post("/contact", (req, res) => {
   const Name = req.body.name;
@@ -40,11 +63,22 @@ app.post("/contact", (req, res) => {
   const Phone = req.body.phone;
   const inquiry = req.body.about;
   const message = req.body.message;
-  console.log(Name);
-  console.log(email);
-  console.log(Phone);
-  console.log(inquiry);
-  console.log(message);
+  console.log("Your input has been submitted.");
+  const contact = {
+    name: Name,
+    email: email,
+    phone: Phone,
+    inquiry: inquiry,
+    message: message,
+  };
+  database.collection("contact").insertOne(contact, (err, collection) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("record Inserted Success");
+    }
+  });
+  return res.redirect("/success.html");
 });
 app.listen(3400, function () {
   console.log("Data is running on port 3400");

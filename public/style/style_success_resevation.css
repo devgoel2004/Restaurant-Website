@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.image img {
+  width: 90%;
+  height: 600px;
+}
+.content {
+  min-width: 95vw;
+  min-height: 80vh;
+}
+.welcome {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #1d1d6c;
+  font-family: "Signika";
+}
+@media screen and (max-width: 9000vh) {
+  .content {
+    min-height: 92vh;
+  }
+  .image img {
+    height: 540px;
+  }
+}
